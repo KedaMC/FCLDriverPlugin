@@ -1,0 +1,39 @@
+name: Build Driver APK
+
+on:
+  workflow_dispatch:   # bisa dijalankan manual dari tab Actions
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Cek file driver .so
+        run: |
+          ls -lh app/src/main/jniLibs/arm64-v8a/
+          test -n "$(ls app/src/main/jniLibs/arm64-v8a/*.so 2>/dev/null)" || { echo "File .so tidak ditemukan!"; exit 1; }
+
+      - name: Build APK (debug, sudah otomatis ter-sign)
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: driver-apk
+          path: app/build/outputs/apk/debug/*.apk
