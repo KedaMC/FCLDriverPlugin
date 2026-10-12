@@ -22,14 +22,17 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","PanVK g52")
+            resValue("string","app_name","MG + SFPEW")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".panVKg52"
+            applicationIdSuffix = ".mgsfpew"
 
-            //驱动在启动器内显示的名称
-            //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "PanVK g52"
+            //渲染器在启动器内显示的名称
+            //The name displayed by the renderer in the launcher
+            manifestPlaceholders["renderer"] = "mgsfpew:libSimpleFPEWrapper.so:libSimpleFPEWrapper.so"
+            manifestPlaceholders["des"] = "MobileGlues + SFPEW (OpenGL 4.0)"
+            manifestPlaceholders["boatEnv"] = "LIBGL_ES=3:SFPEW_EGL=libmobileglues.so:DLOPEN=libmobileglues.so"
+            manifestPlaceholders["pojavEnv"] = "LIBGL_MIPMAP=3:SFPEW_EGL=libmobileglues.so:DLOPEN=libmobileglues.so:POJAV_RENDERER=opengles3:LIBGL_ES=3"
         }
     }
     compileOptions {

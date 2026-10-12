@@ -21,8 +21,17 @@
             android:name="fclPlugin"
             android:value="true" />
         <meta-data
-            android:name="driver"
-            android:value="${driver}" />
+            android:name="renderer"
+            android:value="${renderer}" />
+        <meta-data
+            android:name="des"
+            android:value="${des}" />
+        <meta-data
+            android:name="boatEnv"
+            android:value="${boatEnv}" />
+        <meta-data
+            android:name="pojavEnv"
+            android:value="${pojavEnv}" />
 
     </application>
 
