@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.plugin.renderer"
+    namespace = "com.mio.panvkg52.renderer"
     compileSdk = 34
 
     defaultConfig {
@@ -29,7 +29,7 @@ android {
 
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "PanVk V7 0.0.2"
+            manifestPlaceholders["driver"] = "PanVk g52"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
             manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
