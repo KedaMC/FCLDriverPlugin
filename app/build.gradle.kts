@@ -20,17 +20,19 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-    resValue("string","app_name","PanVK zenithblue-oss")
-    applicationIdSuffix = ".panvkzenithblue-oss"
-    manifestPlaceholders["driver"] = "PanVK zenithblue-oss"
-    manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
-    manifestPlaceholders["driverGpu"] = "mali"
-}
+            resValue("string", "app_name", "PanVK zenithblue-oss")
+            applicationIdSuffix = ".panvkzenithblueoss"
+            manifestPlaceholders["driver"] = "PanVK zenithblue-oss"
+            manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
+            manifestPlaceholders["driverGpu"] = "mali"
+        }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
