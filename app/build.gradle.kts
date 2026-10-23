@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.panvklzenithblue-oss.renderer"
+    namespace = "com.mio.panvklzenithblueoss.renderer"
     compileSdk = 34
 
     defaultConfig {
