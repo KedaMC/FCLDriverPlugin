@@ -54,12 +54,12 @@ jobs:
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n 1)
           mkdir -p out
           "$APKSIGNER" sign --ks "$KS" --ks-pass "pass:$KS_PASS" --ks-key-alias "$ALIAS" \
-            --key-pass "pass:$K_PASS" --out out/PanVkFristOneRR.apk "$UNSIGNED"
-          "$APKSIGNER" verify --print-certs out/PanvkFristOneRR.apk
+            --key-pass "pass:$K_PASS" --out out/PanVk-FristOneRR.apk "$UNSIGNED"
+          "$APKSIGNER" verify --print-certs out/Panvk-FristOneRR.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: PanVk-panvkFristOneRR
-          path: out/PanVk-panvkFristOneRR.apk
+          name: Panvk-FristOneRR
+          path: out/PanVk-FristOneRR.apk
           if-no-files-found: error
