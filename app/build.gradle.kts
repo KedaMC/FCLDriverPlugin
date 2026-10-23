@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.panvklukavalen.renderer"
+    namespace = "com.mio.panvklukevalen.renderer"
     compileSdk = 34
 
     defaultConfig {
@@ -20,9 +20,9 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-    resValue("string","app_name","PanVK LukaValen")
-    applicationIdSuffix = ".panvklukavalen"
-    manifestPlaceholders["driver"] = "PanVK LukaValen"
+    resValue("string","app_name","PanVK LukeValen")
+    applicationIdSuffix = ".panvklukevalen"
+    manifestPlaceholders["driver"] = "PanVK LukeValen"
     manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
     manifestPlaceholders["driverGpu"] = "mali"
 }
