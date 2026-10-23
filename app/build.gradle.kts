@@ -21,7 +21,7 @@ android {
         }
         configureEach {
     resValue("string","app_name","PanVK FristOneRR")
-    applicationIdSuffix = ".panvkFristOneRR"
+    applicationIdSuffix = ".PanVkFristOneRR"
     manifestPlaceholders["driver"] = "PanVK FristOneRR"
     manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
     manifestPlaceholders["driverGpu"] = "mali"
