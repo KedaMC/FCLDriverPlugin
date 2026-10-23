@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.plugin.renderer"
+    namespace = "com.mio.PanVkKmisha.renderer"
     compileSdk = 34
 
     defaultConfig {
@@ -22,20 +22,20 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","Turnip 24.3.2")
+            resValue("string","app_name","PanVk Kmisha")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".turnip2432"
+            applicationIdSuffix = ".PanVkKmisha"
 
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "Turnip 24.3.2"
+            manifestPlaceholders["driver"] = "PanVk Kmisha"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
             manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
             //驱动适配的 GPU 家族：adreno / mali / any
             //The GPU family the driver targets: adreno / mali / any
-            manifestPlaceholders["driverGpu"] = "adreno"
+            manifestPlaceholders["driverGpu"] = "mali"
         }
     }
     compileOptions {
