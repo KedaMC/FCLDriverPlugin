@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.panvkg52.renderer"
+    namespace = "com.mio.panvkFristOneRR.renderer"
     compileSdk = 34
 
     defaultConfig {
@@ -20,9 +20,9 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-    resValue("string","app_name","PanVK kbase")
-    applicationIdSuffix = ".panvkkbaserc4lm"
-    manifestPlaceholders["driver"] = "PanVK-kbase RC4 lowmem"
+    resValue("string","app_name","PanVK FristOneRR")
+    applicationIdSuffix = ".panvkFristOneRR"
+    manifestPlaceholders["driver"] = "PanVK FristOneRR"
     manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
     manifestPlaceholders["driverGpu"] = "mali"
 }
