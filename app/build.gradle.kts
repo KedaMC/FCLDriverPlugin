@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mio.plugin.renderer"
+        applicationId = "com.mio.plugin.purplevk"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -22,14 +22,10 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","Turnip 24.3.2")
-            //包名后缀
-            //package name Suffix
-            applicationIdSuffix = ".turnip2432"
-
+            resValue("string","app_name","purpleVK a6xx+")
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "Turnip 24.3.2"
+            manifestPlaceholders["driver"] = "purpleVK a6xx+ T-30"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
             manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
