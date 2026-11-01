@@ -20,28 +20,31 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-            //应用名
-            //app name
-            resValue("string","app_name","Turnip 24.3.2")
-            //包名后缀
-            //package name Suffix
+            // App name shown in Android
+            resValue("string", "app_name", "LTW Renderer")
+
+            // Keep a unique package suffix so this plugin can coexist with others
             applicationIdSuffix = ".renderermj"
 
-            //驱动在启动器内显示的名称
-            //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "LTW from MJ Launcher"
-            //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
-            //Driver library file name (must exist under src/main/jniLibs/<abi>/)
-            manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
-            //驱动适配的 GPU 家族：adreno / mali / any
-            //The GPU family the driver targets: adreno / mali / any
-            manifestPlaceholders["driverGpu"] = "adreno"
+            // FCL renderer plugin metadata (V1 contract)
+            manifestPlaceholders["des"] = "LTW Renderer"
+            manifestPlaceholders["renderer"] = "LTW:libltw.so:libltw.so"
+
+            // No additional environment variables are required by this wrapper
+            manifestPlaceholders["boatEnv"] = ""
+            manifestPlaceholders["pojavEnv"] = ""
+
+            // Empty means no Minecraft version restriction
+            manifestPlaceholders["minMCVer"] = ""
+            manifestPlaceholders["maxMCVer"] = ""
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
