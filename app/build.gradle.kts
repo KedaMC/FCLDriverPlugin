@@ -20,9 +20,9 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-            resValue("string", "app_name", "PanVK zenithblue-oss")
+            resValue("string", "app_name", "PanVK zenithblue-oss v26.3.1")
             applicationIdSuffix = ".PanVkzenithblueoss"
-            manifestPlaceholders["driver"] = "PanVK zenithblue-oss"
+            manifestPlaceholders["driver"] = "PanVK zenithblue-oss v26.3.1"
             manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
             manifestPlaceholders["driverGpu"] = "mali"
         }
