@@ -1,11 +1,11 @@
 name: Build APK
 
-# Berjalan otomatis setiap push ke branch driver/* (tidak menyentuh main),
-# dan bisa juga dipicu manual dari tab Actions bila file ini sudah ada di default branch.
+# Berjalan otomatis setiap push ke branch renderer/* (tidak menyentuh main),
+# dan bisa juga dipicu manual dari tab Actions bila workflow tersedia di default branch.
 on:
   push:
     branches:
-      - "driver/**"
+      - "renderer/**"
   workflow_dispatch:
 
 jobs:
@@ -53,7 +53,7 @@ jobs:
 
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n 1)
           mkdir -p out
-          "$APKSIGNER" sign --ks "$KS" --ks-pass "pass:$KS_PASS" --ks-key-alias "$ALIAS" \
+          "$APKSIGNER" sign --ks "$KS" --ks-pass "pass:$KS_PASS" --key-alias "$ALIAS" \
             --key-pass "pass:$K_PASS" --out out/LTW_renderer.apk "$UNSIGNED"
           "$APKSIGNER" verify --print-certs out/LTW_renderer.apk
 
