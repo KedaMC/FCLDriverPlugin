@@ -25,11 +25,11 @@ android {
             resValue("string","app_name","Turnip 24.3.2")
             //包名后缀
             //package name Suffix
-            applicationIdSuffix = ".turnip2432"
+            applicationIdSuffix = ".renderermj"
 
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "Turnip 24.3.2"
+            manifestPlaceholders["driver"] = "LTW from MJ Launcher"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
             manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
