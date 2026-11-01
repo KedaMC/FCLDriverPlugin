@@ -53,7 +53,7 @@ jobs:
 
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -n 1)
           mkdir -p out
-          "$APKSIGNER" sign --ks "$KS" --ks-pass "pass:$KS_PASS" --key-alias "$ALIAS" \
+          "$APKSIGNER" sign --ks "$KS" --ks-pass "pass:$KS_PASS" --ks-key-alias "$ALIAS" \
             --key-pass "pass:$K_PASS" --out out/LTW_renderer.apk "$UNSIGNED"
           "$APKSIGNER" verify --print-certs out/LTW_renderer.apk
 
