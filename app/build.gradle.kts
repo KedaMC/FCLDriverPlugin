@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mio.panvkjimvulkanr8.renderer"
+    namespace = "com.mio.panvkjimvulkanr10.renderer"
     compileSdk = 34
 
     defaultConfig {
@@ -22,14 +22,14 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","PanVK JimVulkan R8")
+            resValue("string","app_name","PanVk JimVulkan R10")
             //包名后缀
             //package name Suffix
             applicationIdSuffix = ".panvkjimvulkan"
 
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "PanVK JimVulkan R8"
+            manifestPlaceholders["driver"] = "PanVk JimVulkan R10"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
             manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
