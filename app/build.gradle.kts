@@ -22,17 +22,17 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","PanVk Kmisha")
+            resValue("string","app_name","PanVk Kmisha 26.2-rc1")
             //包名后缀
             //package name Suffix
             applicationIdSuffix = ".PanVkKmisha"
 
             //驱动在启动器内显示的名称
             //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "PanVk Kmisha"
+            manifestPlaceholders["driver"] = "PanVk Kmisha 26.2-rc1"
             //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
             //Driver library file name (must exist under src/main/jniLibs/<abi>/)
-            manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
+            manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
             //驱动适配的 GPU 家族：adreno / mali / any
             //The GPU family the driver targets: adreno / mali / any
             manifestPlaceholders["driverGpu"] = "mali"
